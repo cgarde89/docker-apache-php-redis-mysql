@@ -1,6 +1,6 @@
 # Apache PHP Redis MySQL
 
-Docker runing Apachem PHP-FPM, Redis and MySQL
+Docker runing Apache PHP-FPM, Redis and MySQL
 
 ### Images used
 
