@@ -13,7 +13,7 @@ Docker runing Apachem PHP-FPM, Redis and MySQL
 The project use the following ports:
 
 | **Server** | **Port** |
-| ---------- | -------- |
+| ---------- | --------: |
 | MySQL      | 3360     |
 | PHP | 9090 |
 | Apache | 80 |
