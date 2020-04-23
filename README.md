@@ -1,4 +1,5 @@
 # Apache PHP Redis MySQL
+[![GitHub version](https://badge.fury.io/gh/cgarde89%2Fdocker-apache-php-redis-mysql.svg)](https://badge.fury.io/gh/cgarde89%2Fdocker-apache-php-redis-mysql)
 
 Docker runing Apache PHP-FPM, Redis and MySQL
 
