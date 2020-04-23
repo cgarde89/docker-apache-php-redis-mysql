@@ -15,13 +15,15 @@ services:
   apache:
     image: 'httpd:2.4.41-alpine'
     container_name: apache
+    environment:
+      - APACHE_HOST=${APACHE_HOST}
     build:
       context: .
       dockerfile: .docker/apache/Dockerfile
     volumes: 
       - ./etc/infrastructure/apache/httpd.conf:/usr/local/apache2/conf/httpd.conf:rw
       - ./etc/infrastructure/apache/httpd-vhosts.conf:/usr/local/apache2/conf/extra/httpd-vhosts.conf:rw
-#      - ./etc/infrastructure/apache/ssl:/usr/local/apache2/ssl:delegated
+      - ./etc/infrastructure/ssl:/usr/local/apache2/ssl:delegated
       - .:/var/www/html:delegated
     ports:
     - 80:80
@@ -48,6 +50,10 @@ services:
   redis: 
     container_name: redis
     image: 'redis:5.0.7-alpine'
+    ports:
+      - 6379:6379
+    networks:
+      - backend
 networks:
     backend:
       name: backend
