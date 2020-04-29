@@ -10,3 +10,6 @@ etc/infrastructure/ssl/
 # Application
 vendor/
 composer.lock
+
+# idea
+.idea/
